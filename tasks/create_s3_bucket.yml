@@ -1,0 +1,17 @@
+---
+
+- name: ensure s3 bucket is created
+  s3_bucket:
+    # Fixed values
+    state: present
+    # Required values
+    name: "{{ s3.name }}"
+    # Optional values
+    policy: "{{ s3.policy | default(aws_s3_bucket_default_policy | default(omit)) }}"
+    versioning: "{{ s3.versioning | default(omit) }}"
+    tags: "{{ s3.tags | default({}) | get_attr('key', 'val') }}"
+    region: "{{ s3.region | default(aws_s3_bucket_default_region | default(omit)) }}"
+    aws_access_key: "{{ lookup('ENV', 'AWS_ACCESS_KEY') | default(omit) }}"
+    aws_secret_key: "{{ lookup('ENV', 'AWS_SECRET_KEY') | default(omit) }}"
+    security_token: "{{ lookup('ENV', 'AWS_SECURITY_TOKEN') | default(omit) }}"
+    profile: "{{ aws_s3_bucket_profile | default(omit) }}"

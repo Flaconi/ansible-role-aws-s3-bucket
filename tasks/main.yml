@@ -1,0 +1,10 @@
+---
+
+###
+### Main entrypoint
+###
+- include_tasks: create_s3_bucket.yml
+  loop_control:
+    loop_var: s3
+  with_items:
+    - "{{ aws_s3_buckets }}"

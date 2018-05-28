@@ -4,7 +4,7 @@ This role handles the creation of AWS S3 buckets
 
 [![Build Status](https://travis-ci.org/Flaconi/ansible-role-aws-s3-bucket.svg?branch=master)](https://travis-ci.org/Flaconi/ansible-role-aws-s3-bucket)
 [![Version](https://img.shields.io/github/tag/Flaconi/ansible-role-aws-s3-bucket.svg)](https://github.com/Flaconi/ansible-role-aws-s3-bucket/tags)
-<!-- [![Ansible Galaxy](https://img.shields.io/ansible/role/d/25919.svg)](https://galaxy.ansible.com/Flaconi/aws-s3-bucket/) -->
+[![Ansible Galaxy](https://img.shields.io/ansible/role/d/25927.svg)](https://galaxy.ansible.com/Flaconi/aws-s3-bucket/)
 
 ## Requirements
 
